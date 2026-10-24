@@ -266,7 +266,7 @@ void MainThread::search() {
   {
       rootMoves.push_back(RootMove(MOVE_NONE));
       sync_cout << "info depth 0 score "
-                << UCI::value(rootPos.checkers() ? -VALUE_MATE : VALUE_DRAW)
+                << UCI::value(-VALUE_MATE)
                 << sync_endl;
   }
   else

@@ -1037,7 +1037,7 @@ Value Position::see(Move m) const {
 
 bool Position::is_draw() const {
 
-  if (st->rule50 > 99 && (!checkers() || MoveList<LEGAL>(*this).size()))
+  if (st->rule50 > 99 && MoveList<LEGAL>(*this).size())
       return true;
 
   StateInfo* stp = st;

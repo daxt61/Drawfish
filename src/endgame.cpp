@@ -149,7 +149,7 @@ Value Endgame<KXK>::operator()(const Position& pos) const {
 
   // Stalemate detection with lone king
   if (pos.side_to_move() == weakSide && !MoveList<LEGAL>(pos).size())
-      return VALUE_DRAW;
+      return -VALUE_MATE_IN_MAX_PLY + 1;
 
   Square winnerKSq = pos.square<KING>(strongSide);
   Square loserKSq = pos.square<KING>(weakSide);
